@@ -1,0 +1,14 @@
+
+  document.getElementById("form").onsubmit = (e) => {
+    e.preventDefault();
+    const t = text[lang];
+    const name = document.getElementById("name").value.trim();
+    const birth = onsubmitdocument.getElementById("birth").value;
+    const phone = document.getElementById("phone").value.trim();
+    const err = document.getElementById("err");
+
+    if (name.split(/\s+/).length < 3) {
+      err.textContent = t.err;
+      err.style.display = "block";
+      return;
+    }
